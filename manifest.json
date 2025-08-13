@@ -1,0 +1,51 @@
+{
+  "manifestVersion": "1.0",
+  "id": "org.stremio.tmdbcollections.kids",
+  "version": "2.1.0",
+  "name": "TMDB Collections - Kids Only",
+  "description": "TMDB Collections restricted to kids-friendly genres.",
+  "types": ["movie", "collections"],
+  "resources": [
+    "catalog",
+    { "name": "meta", "types": ["movie"], "idPrefixes": ["tmdbc."] },
+    { "name": "stream", "types": ["movie"], "idPrefixes": ["tt"] }
+  ],
+  "idPrefixes": ["tmdbc."],
+  "behaviorHints": { "configurable": false },
+  "catalogs": [
+    {
+      "type": "collections",
+      "id": "tmdbc.popular",
+      "name": "Popular",
+      "extra": [
+        { "name": "genre", "isRequired": false, "options": ["Animation", "Family"] }
+      ]
+    },
+    {
+      "type": "collections",
+      "id": "tmdbc.topRated",
+      "name": "Top Rated",
+      "extra": [
+        { "name": "genre", "isRequired": false, "options": ["Animation", "Family"] }
+      ]
+    },
+    {
+      "type": "collections",
+      "id": "tmdbc.newReleases",
+      "name": "New Releases",
+      "extra": [
+        { "name": "genre", "isRequired": false, "options": ["Animation", "Family"] }
+      ]
+    },
+    {
+      "type": "collections",
+      "id": "tmdbc.search",
+      "name": "Search",
+      "extra": [{ "name": "search", "isRequired": true }]
+    }
+  ],
+  "genres": [
+    { "id": 16, "name": "Animation" },
+    { "id": 10751, "name": "Family" }
+  ]
+}
